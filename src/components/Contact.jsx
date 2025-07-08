@@ -9,6 +9,7 @@ import {
   MessageSquare,
   User,
   CheckCircle,
+  AlertCircle,
 } from "lucide-react";
 
 const Contact = () => {
@@ -18,7 +19,8 @@ const Contact = () => {
     subject: "",
     message: "",
   });
-  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState(null); // 'success', 'error', null
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -28,12 +30,47 @@ const Contact = () => {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Handle form submission here
-    console.log("Form submitted:", formData);
-    setIsSubmitted(true);
-    setTimeout(() => setIsSubmitted(false), 3000);
+    setIsSubmitting(true);
+    setSubmitStatus(null);
+
+    try {
+      const response = await fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams({
+          "form-name": "contact",
+          name: formData.name,
+          email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+        }).toString(),
+      });
+
+      if (response.ok) {
+        setSubmitStatus("success");
+        // Reset form
+        setFormData({
+          name: "",
+          email: "",
+          subject: "",
+          message: "",
+        });
+      } else {
+        throw new Error("Form submission failed");
+      }
+    } catch (error) {
+      console.error("Form submission error:", error);
+      setSubmitStatus("error");
+    } finally {
+      setIsSubmitting(false);
+
+      // Clear status after 5 seconds
+      setTimeout(() => {
+        setSubmitStatus(null);
+      }, 5000);
+    }
   };
 
   const contactInfo = [
@@ -109,7 +146,41 @@ const Contact = () => {
                   <span>Get In Touch</span>
                 </h3>
 
-                <form onSubmit={handleSubmit} className="space-y-6">
+                {/* Status Messages */}
+                {submitStatus === "success" && (
+                  <div className="bg-green-500/20 border border-green-500/30 rounded-lg p-4 mb-6">
+                    <div className="flex items-center space-x-2">
+                      <CheckCircle className="text-green-400" size={20} />
+                      <span className="text-green-400 font-medium">
+                        Message sent successfully! I'll get back to you soon.
+                      </span>
+                    </div>
+                  </div>
+                )}
+
+                {submitStatus === "error" && (
+                  <div className="bg-red-500/20 border border-red-500/30 rounded-lg p-4 mb-6">
+                    <div className="flex items-center space-x-2">
+                      <AlertCircle className="text-red-400" size={20} />
+                      <span className="text-red-400 font-medium">
+                        Failed to send message. Please try again or email me
+                        directly.
+                      </span>
+                    </div>
+                  </div>
+                )}
+
+                {/* Netlify Form */}
+                <form
+                  name="contact"
+                  method="POST"
+                  data-netlify="true"
+                  onSubmit={handleSubmit}
+                  className="space-y-6"
+                >
+                  {/* Hidden field for Netlify */}
+                  <input type="hidden" name="form-name" value="contact" />
+
                   <div className="grid md:grid-cols-2 gap-6">
                     <div>
                       <label className="block text-gray-300 mb-2 text-sm font-medium">
@@ -126,7 +197,8 @@ const Contact = () => {
                           value={formData.name}
                           onChange={handleInputChange}
                           required
-                          className="w-full bg-slate-900/50 border border-white/10 rounded-lg pl-10 pr-4 py-3 text-white placeholder-gray-400 focus:border-blue-400 focus:outline-none transition-colors"
+                          disabled={isSubmitting}
+                          className="w-full bg-slate-900/50 border border-white/10 rounded-lg pl-10 pr-4 py-3 text-white placeholder-gray-400 focus:border-blue-400 focus:outline-none transition-colors disabled:opacity-50"
                           placeholder="Your name"
                         />
                       </div>
@@ -147,7 +219,8 @@ const Contact = () => {
                           value={formData.email}
                           onChange={handleInputChange}
                           required
-                          className="w-full bg-slate-900/50 border border-white/10 rounded-lg pl-10 pr-4 py-3 text-white placeholder-gray-400 focus:border-blue-400 focus:outline-none transition-colors"
+                          disabled={isSubmitting}
+                          className="w-full bg-slate-900/50 border border-white/10 rounded-lg pl-10 pr-4 py-3 text-white placeholder-gray-400 focus:border-blue-400 focus:outline-none transition-colors disabled:opacity-50"
                           placeholder="your@email.com"
                         />
                       </div>
@@ -164,7 +237,8 @@ const Contact = () => {
                       value={formData.subject}
                       onChange={handleInputChange}
                       required
-                      className="w-full bg-slate-900/50 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:border-blue-400 focus:outline-none transition-colors"
+                      disabled={isSubmitting}
+                      className="w-full bg-slate-900/50 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:border-blue-400 focus:outline-none transition-colors disabled:opacity-50"
                       placeholder="Project discussion, consultation, collaboration..."
                     />
                   </div>
@@ -178,20 +252,22 @@ const Contact = () => {
                       value={formData.message}
                       onChange={handleInputChange}
                       required
+                      disabled={isSubmitting}
                       rows={6}
-                      className="w-full bg-slate-900/50 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:border-blue-400 focus:outline-none transition-colors resize-none"
+                      className="w-full bg-slate-900/50 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:border-blue-400 focus:outline-none transition-colors resize-none disabled:opacity-50"
                       placeholder="Tell me about your project, requirements, or how we can collaborate..."
                     />
                   </div>
 
                   <button
                     type="submit"
-                    className="w-full bg-gradient-to-r from-blue-500 to-green-400 text-white py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-green-500 transition-all duration-200 flex items-center justify-center space-x-2"
+                    disabled={isSubmitting}
+                    className="w-full bg-gradient-to-r from-blue-500 to-green-400 text-white py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-green-500 transition-all duration-200 flex items-center justify-center space-x-2 disabled:opacity-50 disabled:cursor-not-allowed"
                   >
-                    {isSubmitted ? (
+                    {isSubmitting ? (
                       <>
-                        <CheckCircle size={20} />
-                        <span>Message Sent!</span>
+                        <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white"></div>
+                        <span>Sending...</span>
                       </>
                     ) : (
                       <>
