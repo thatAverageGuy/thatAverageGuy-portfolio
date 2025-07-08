@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   Mail,
   Phone,
@@ -20,7 +20,23 @@ const Contact = () => {
     message: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState(null); // 'success', 'error', null
+  const [submitStatus, setSubmitStatus] = useState(null);
+
+  useEffect(() => {
+    // Load EmailJS script dynamically
+    const script = document.createElement("script");
+    script.src =
+      "https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js";
+    script.onload = () => {
+      // Initialize EmailJS with your public key
+      window.emailjs.init("ybdARx6UjtAjlu9kG"); // Replace with your actual public key
+    };
+    document.head.appendChild(script);
+
+    return () => {
+      document.head.removeChild(script);
+    };
+  }, []);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -36,32 +52,39 @@ const Contact = () => {
     setSubmitStatus(null);
 
     try {
-      const response = await fetch("/", {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: new URLSearchParams({
-          "form-name": "contact",
-          name: formData.name,
-          email: formData.email,
-          subject: formData.subject,
-          message: formData.message,
-        }).toString(),
-      });
-
-      if (response.ok) {
-        setSubmitStatus("success");
-        // Reset form
-        setFormData({
-          name: "",
-          email: "",
-          subject: "",
-          message: "",
-        });
-      } else {
-        throw new Error("Form submission failed");
+      // Check if EmailJS is loaded
+      if (!window.emailjs) {
+        throw new Error("EmailJS not loaded. Please refresh and try again.");
       }
+
+      // Template parameters that will be sent to EmailJS
+      const templateParams = {
+        from_name: formData.name,
+        from_email: formData.email,
+        subject: formData.subject,
+        message: formData.message,
+        to_email: "yogesh.singh893@gmail.com", // Your email
+      };
+
+      // Send email using EmailJS
+      const result = await window.emailjs.send(
+        "service_gr58y38", // Replace with your service ID
+        "template_75j8rh5", // Replace with your template ID
+        templateParams
+      );
+
+      console.log("Email sent successfully:", result);
+      setSubmitStatus("success");
+
+      // Reset form
+      setFormData({
+        name: "",
+        email: "",
+        subject: "",
+        message: "",
+      });
     } catch (error) {
-      console.error("Form submission error:", error);
+      console.error("Email sending failed:", error);
       setSubmitStatus("error");
     } finally {
       setIsSubmitting(false);
@@ -170,17 +193,7 @@ const Contact = () => {
                   </div>
                 )}
 
-                {/* Netlify Form */}
-                <form
-                  name="contact"
-                  method="POST"
-                  data-netlify="true"
-                  onSubmit={handleSubmit}
-                  className="space-y-6"
-                >
-                  {/* Hidden field for Netlify */}
-                  <input type="hidden" name="form-name" value="contact" />
-
+                <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid md:grid-cols-2 gap-6">
                     <div>
                       <label className="block text-gray-300 mb-2 text-sm font-medium">
