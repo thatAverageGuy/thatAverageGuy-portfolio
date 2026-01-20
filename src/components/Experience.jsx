@@ -16,81 +16,114 @@ const Experience = () => {
   const experiences = [
     {
       id: 0,
-      title: "Senior Software Engineer - Machine Learning",
-      company: "Randstad Digital - CISCO",
-      period: "August 2024 - Present",
+      title: "Senior Software Engineer - ML and Agentic AI",
+      company: "Randstad Digital - DocuSign",
+      period: "August 2025 - Present",
       type: "Full-time Remote",
       description:
-        "Leading AI research initiatives and developing large-scale AIOps platforms for enhanced enterprise capabilities",
+        "Architecting production-scale AI agent systems for DocuSign's sales operations and building comprehensive data infrastructure",
       highlights: [
-        "Architected and leading the ongoing implementation of a large-scale AIOps platform to provide enhanced Assurance capabilities across diverse Cisco products (ThousandEyes, Meraki, Catalyst Center) for enterprise customers",
-        "Engineered and deployed production-grade MoE (Mixture of Experts) models, including developing a novel modular framework to convert standard LLMs into specialized MoE architectures, serving internal enterprise teams",
-        "Spearheaded the development of a Network Root Cause Analysis (RCA) solution by generating synthetic reasoning datasets and training bespoke models; successfully deployed for enterprise-wide internal testing",
+        "Architected and deployed production-scale AI agent systems for DocuSign's sales outreach teams, implementing CrewAI-based multi-agent workflows for automated lead generation and personalized email campaigns",
+        "Engineered end-to-end data infrastructure supporting AI operations, developing dbt transformation pipelines and Airflow DAGs for orchestrating complex data workflows across Snowflake and production databases",
+        "Built and deployed PII anonymization microservices using Docker containerization and AWS ECS task deployment, ensuring compliance requirements for sensitive customer data in ML pipelines",
+      ],
+      technologies: [
+        "CrewAI",
+        "Multi-Agent Systems",
+        "dbt",
+        "Apache Airflow",
+        "Snowflake",
+        "Docker",
+        "AWS ECS",
+        "PII Anonymization",
+        "Data Infrastructure",
+      ],
+    },
+    {
+      id: 1,
+      title: "Senior Software Engineer - ML and Agentic AI",
+      company: "Randstad Digital - CISCO",
+      period: "August 2024 - August 2025",
+      type: "Full-time Remote",
+      description:
+        "Led AI research initiatives and developed large-scale AIOps platforms for enhanced enterprise capabilities across diverse Cisco products",
+      highlights: [
+        "Architected and led implementation of large-scale AIOps platform providing enhanced Assurance capabilities across diverse Cisco products (ThousandEyes, Meraki, Catalyst Center) for enterprise customers",
+        "Engineered and deployed production-grade Mixture of Experts (MoE) models, developing novel modular framework to convert standard LLMs into specialized MoE architectures, serving internal enterprise teams",
+        "Spearheaded development of Network Root Cause Analysis (RCA) solution by generating synthetic reasoning datasets and training bespoke models; successfully deployed for enterprise-wide internal testing",
         "Led cross-functional collaboration with product teams to integrate AI capabilities into existing Cisco infrastructure",
-        "Research and evaluate emerging AI/ML technologies for enterprise applications",
       ],
       technologies: [
         "AIOps Platforms",
         "Mixture of Experts (MoE)",
         "LLMs",
         "Network Analysis",
-        "Enterprise AI",
-        "Production ML Systems",
-        "Cisco Products Integration",
-      ],
-    },
-    {
-      id: 1,
-      title: "Freelance AI Consultant",
-      company: "Independent",
-      period: "August 2023 - Present",
-      type: "Consulting",
-      description:
-        "Delivering end-to-end AI solutions across various industries with focus on GenAI and Computer Vision",
-      highlights: [
-        "Developed vehicle detection systems for automotive industry with real-time tracking capabilities",
-        "Fine-tuned LLaMA-2 model using PEFT and QLoRA techniques for domain-specific applications",
-        "Built advanced RAG systems with query transformation and re-ranking for improved retrieval accuracy",
-        "Extensive work with OpenAI APIs and open-source LLMs for custom AI solutions",
-        "Implemented comprehensive MLOps monitoring solutions for production deployments",
-      ],
-      technologies: [
-        "Computer Vision",
-        "LLM Fine-tuning",
-        "RAG Systems",
-        "MLOps",
-        "Model Optimization",
-        "Prompt Engineering",
-        "Vehicle Detection",
+        "ThousandEyes",
+        "Meraki",
+        "Catalyst Center",
+        "Synthetic Data Generation",
+        "Root Cause Analysis",
       ],
     },
     {
       id: 2,
+      title: "Freelance Consultant - AI/ML",
+      company: "Independent",
+      period: "August 2023 - August 2024",
+      type: "Consulting",
+      description:
+        "Delivered end-to-end AI solutions across various industries with focus on NLP, Computer Vision, and GenAI",
+      highlights: [
+        "Implemented end-to-end NL2SQL pipeline with Human-in-the-loop verification, labeling, training and validation loop with best MLOps principles for a Fortune 500 company",
+        "Developed automated Video Tagging pipeline leveraging Computer Vision to identify and tag fashion items from product catalogs within videos",
+        "Built AI Teaching Assistant agent using RAG and multimodal data processing (docs, videos, web) for automated generation of teaching materials and student evaluations",
+        "Engineered multi-lingual ID document parsing system (passports, govt. IDs) extracting key entities from various file types",
+        "Developed Computer Vision systems for vehicle detection and tracking in driving school analysis",
+        "Architected advanced RAG applications incorporating query transformation and re-ranking, utilizing Vector Databases (ChromaDB, Qdrant)",
+        "Fine-tuned LLMs (LLaMA-2, Mistral 7B) using PEFT, QLoRA, and applied advanced prompt engineering (CoT, ReAct)",
+        "Utilized Quantization, Distillation, and Pruning in models to significantly enhance deployment efficiency in limited-resource settings",
+      ],
+      technologies: [
+        "NL2SQL",
+        "Computer Vision",
+        "RAG Systems",
+        "LLM Fine-tuning",
+        "PEFT",
+        "QLoRA",
+        "ChromaDB",
+        "Qdrant",
+        "Model Optimization",
+        "MLOps",
+        "Prompt Engineering",
+      ],
+    },
+    {
+      id: 3,
       title: "Machine Learning Engineer",
-      company: "Wisteli, Noida",
+      company: "Althea.AI (previously Wisteli Informatics)",
       period: "August 2021 - August 2023",
       type: "Full-time",
       description:
-        "Built production-ready ML solutions for healthcare and document processing with team leadership experience",
+        "Led full lifecycle of ML projects for document intelligence and healthcare domain with team leadership experience",
       highlights: [
-        "Achieved 78% accuracy on borderless table extraction from medical documents using custom deep learning models",
-        "Improved computer vision results by 20% using YOLOv5 optimization for real-time object detection",
-        "Led a team of 4 developers and mentored 7 interns in ML best practices and production deployment",
-        "Successfully delivered 5 POCs from requirements to production deployment on AWS infrastructure",
-        "Deployed scalable ML models using Docker containerization and REST API frameworks",
+        "Led full lifecycle of 5 key Proofs-of-Concept, translating requirements into production-ready ML solutions for document intelligence and healthcare domain",
+        "Developed and deployed multi-modal models for automated classification, layout detection and data extraction (LayoutLM) from complex documents (medical reports, invoices, KYC data)",
+        "Implemented custom model + heuristics pipeline achieving 78% accuracy on challenging borderless table extraction tasks",
+        "Improved overall pipeline accuracy by 20% through strategic application of YOLOv5 and advanced OpenCV image processing techniques",
+        "Built and deployed ML models for insurance fraud/abuse detection",
+        "Engineered and deployed scalable REST APIs (Flask) on AWS EC2 using Docker and RabbitMQ for asynchronous processing",
+        "Developed specialized solutions including Tuberculosis detection pipeline (X-ray analysis) and image denoising engine (U-Net based autoencoder) improving OCR quality",
+        "Implemented advanced image forgery detection techniques (RANSAC, Autoencoders, Noise Print)",
+        "Managed team of 4 developers and mentored 7 interns, driving project execution and fostering technical growth",
       ],
       projects: [
-        "Multi-modal Document AI for medical reports and KYC processing",
-        "Healthcare fraud detection system with anomaly detection",
+        "Multi-modal Document AI for medical reports, invoices, and KYC processing",
+        "Insurance fraud/abuse detection system",
         "Tuberculosis detection from chest X-rays using deep learning",
-        "Image tampering detection engine for document verification",
+        "Image forgery detection engine for document verification",
+        "Borderless table extraction with 78% accuracy",
       ],
     },
-  ];
-
-  const companies = [
-    { name: "VenaAI", role: "Co-Founder", period: "August 2023 - Present" },
-    { name: "HireCube", role: "Founder", period: "December 2023 - Present" },
   ];
 
   const toggleMobileExpansion = (index) => {
@@ -365,33 +398,6 @@ const Experience = () => {
                 )}
               </div>
             </div>
-          </div>
-        </div>
-
-        {/* Entrepreneurial ventures */}
-        <div className="max-w-4xl mx-auto mt-16">
-          <h3 className="text-2xl font-bold text-white mb-8 text-center">
-            Entrepreneurial Ventures
-          </h3>
-          <div className="grid md:grid-cols-2 gap-8">
-            {companies.map((company, index) => (
-              <div
-                key={index}
-                className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-blue-400/30 transition-all duration-300"
-              >
-                <div className="flex items-center justify-between mb-4">
-                  <h4 className="text-xl font-semibold text-white">
-                    {company.name}
-                  </h4>
-                  <span className="text-green-400 text-sm">{company.role}</span>
-                </div>
-                <p className="text-gray-400 text-sm mb-4">{company.period}</p>
-                <div className="flex items-center space-x-2">
-                  <div className="w-2 h-2 bg-green-400 rounded-full"></div>
-                  <span className="text-gray-300 text-sm">Active</span>
-                </div>
-              </div>
-            ))}
           </div>
         </div>
       </div>

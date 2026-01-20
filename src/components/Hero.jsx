@@ -12,15 +12,15 @@ const Hero = () => {
   const [currentMetric, setCurrentMetric] = useState(0);
 
   const metrics = [
-    { icon: Briefcase, label: "4+ Years ML Experience", value: "4+" },
+    { icon: Briefcase, label: "4.5 Years ML Experience", value: "4.5+" },
     {
       icon: Target,
       label: "78% Accuracy on Document Extraction",
       value: "78%",
     },
-    { icon: Trophy, label: "5 POCs Cracked & Deployed", value: "5" },
-    { icon: Building, label: "2 Companies Founded", value: "2" },
-    { icon: Users, label: "7 Interns Mentored", value: "7" },
+    { icon: Trophy, label: "5 POCs to Production", value: "5" },
+    { icon: Building, label: "Enterprise AI Solutions", value: "100%" },
+    { icon: Users, label: "Team Leadership Experience", value: "11+" },
   ];
 
   useEffect(() => {
@@ -59,11 +59,10 @@ const Hero = () => {
                 Yogesh Kumar Singh
               </h1>
               <p className="text-xl md:text-2xl text-blue-300 mb-4 font-medium">
-                Senior Software Engineer (Machine Learning) & AI Entrepreneur
+                Senior Software Engineer - ML and Agentic AI
               </p>
               <p className="text-lg md:text-xl text-gray-300 mb-8 leading-relaxed">
-                Researching & Building AI Solutions to Transform Enterprise
-                Workflows
+                Architecting Large-Scale AI Systems for Enterprise Solutions
               </p>
             </div>
 
@@ -71,20 +70,17 @@ const Hero = () => {
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 mb-8 border border-white/20">
               <p className="text-green-400 font-semibold mb-2">Currently</p>
               <p className="text-white text-lg">
-                Senior ML Engineer at Cisco (via Randstad) | Co-Founder at
-                VenaAI & HireCube
+                Senior Software Engineer - ML and Agentic AI at Randstad Digital (DocuSign)
               </p>
             </div>
 
             {/* Description */}
             <div className="max-w-3xl mx-auto mb-12">
               <p className="text-gray-300 text-lg leading-relaxed">
-                With 4+ years of experience building data-intensive
-                applications, I specialize in developing and deploying classical
-                Computer Vision, NLP, and GenAI solutions. From fine-tuning
-                LLaMA-2 models to deploying real-time object detection systems,
-                I bridge the gap between cutting-edge research and practical
-                business applications.
+                With nearly 4.5 years of experience in machine learning, I specialize in large-scale systems
+                for enterprise solutions. From architecting AIOps platforms to deploying production-grade
+                Mixture of Experts models, I transform cutting-edge AI research into scalable enterprise applications
+                that drive real business impact.
               </p>
             </div>
 

@@ -47,7 +47,7 @@ const Header = () => {
 
   const handleResumeDownload = () => {
     const resumeUrl =
-      "https://drive.google.com/file/d/1Z6njFFFAJyvZzV2Lp1y05hcWcIltTawn/view?usp=drive_link";
+      "https://drive.google.com/file/d/15dkLmWvTHaG6ZBRtyarMHeh1EDSAxDJv/view?usp=sharing";
     window.open(resumeUrl, "_blank");
     setIsMenuOpen(false);
   };

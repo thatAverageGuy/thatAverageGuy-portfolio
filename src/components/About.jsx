@@ -5,27 +5,27 @@ const About = () => {
   const highlights = [
     {
       icon: Brain,
-      title: "AI Research & Development",
+      title: "Enterprise AI Systems",
       description:
-        "Researching cutting-edge AI/ML tools and frameworks at Cisco to identify optimal enterprise solutions",
+        "Architecting large-scale AIOps platforms and production-grade AI solutions for Fortune 500 companies",
     },
     {
       icon: Target,
-      title: "Enterprise Solutions",
+      title: "Mixture of Experts",
       description:
-        "Designing scalable AI solutions that integrate seamlessly with existing infrastructure",
+        "Developed novel modular framework for converting standard LLMs into specialized MoE architectures",
     },
     {
       icon: Lightbulb,
-      title: "Innovation Pipeline",
+      title: "Multi-Agent Systems",
       description:
-        "Contributing to Cisco's AI innovation initiatives through research-driven development",
+        "Building production-scale AI agent workflows using CrewAI for automated enterprise operations",
     },
     {
       icon: Users,
-      title: "Leadership & Mentoring",
+      title: "Team Leadership",
       description:
-        "Led teams of 4+ developers and mentored 7 interns in ML best practices",
+        "Led teams of 4+ developers and mentored 7 interns while driving ML best practices",
     },
   ];
 
@@ -34,7 +34,7 @@ const About = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            Engineering Intelligence, Delivering Impact
+            Engineering Intelligence at Scale
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-green-400 mx-auto mb-8"></div>
         </div>
@@ -44,28 +44,24 @@ const About = () => {
           <div className="space-y-8">
             <div className="prose prose-lg text-gray-300 space-y-6">
               <p>
-                I'm a Senior Machine Learning Engineer at Cisco, where I
-                research and develop AI solutions that transform how enterprises
-                work. My role involves evaluating cutting-edge ML tools,
-                designing intelligent automation systems, and building solutions
-                that make complex workflows more efficient and accessible.
+                I'm a Senior Software Engineer specializing in ML and Agentic AI at Randstad Digital,
+                currently working with DocuSign to architect production-scale AI agent systems. With nearly
+                4.5 years of experience, I've built large-scale systems that transform how enterprises
+                leverage artificial intelligence.
               </p>
 
               <p>
-                Parallel to my corporate role, I run successful consulting
-                practice and co-founded two AI companies - VenaAI and HireCube.
-                This unique combination of enterprise experience and
-                entrepreneurial ventures gives me a comprehensive understanding
-                of both large-scale corporate AI needs and agile startup
-                innovation.
+                My expertise spans the full AI/ML lifecycle - from architecting AIOps platforms for Cisco's
+                enterprise customers to developing novel Mixture of Experts frameworks and deploying
+                multi-agent workflows for automated sales operations. I specialize in transforming
+                cutting-edge research into scalable, production-ready solutions.
               </p>
 
               <p>
-                My journey spans from implementing borderless table extraction
-                achieving 78% accuracy on medical documents to researching
-                enterprise AI tools at one of the world's leading technology
-                companies. I specialize in bridging the gap between cutting-edge
-                research and practical business applications.
+                Throughout my career, I've led the development of 5 key proofs-of-concept from requirements
+                to production, achieving remarkable results like 78% accuracy on borderless table extraction
+                and 20% improvement in computer vision pipelines. I bridge the gap between academic research
+                and practical business applications, ensuring AI solutions deliver measurable impact.
               </p>
             </div>
 
@@ -75,12 +71,11 @@ const About = () => {
                 Professional Philosophy
               </h3>
               <p className="text-gray-300 italic">
-                "At Cisco, I'm constantly exploring how AI can make enterprise
-                workflows smarter and more intuitive. I believe the future of
-                work lies in intelligent automation that empowers employees
-                rather than replaces them. Every tool I research, every solution
-                I build, is designed to enhance human productivity and create
-                more meaningful work experiences."
+                "I believe in building AI systems that not only leverage the latest research but are
+                architected for scale from day one. Every solution I develop - whether it's a
+                multi-agent workflow or an AIOps platform - is designed to handle enterprise complexity
+                while delivering measurable business value. My focus is on creating intelligent systems
+                that enhance human capabilities and drive real operational efficiency."
               </p>
             </div>
           </div>

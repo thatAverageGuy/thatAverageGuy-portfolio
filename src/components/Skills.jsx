@@ -21,27 +21,25 @@ const Skills = () => {
       icon: Brain,
       color: "from-purple-500 to-pink-500",
       skills: [
-        { name: "LangChain", level: 90, icon: "🦜" },
-        { name: "LlamaIndex", level: 85, icon: "🦙" },
-        { name: "HuggingFace", level: 95, icon: "🤗" },
-        { name: "OpenAI APIs", level: 90, icon: "🤖" },
-        { name: "LLaMA Models", level: 85, icon: "🦙" },
-        { name: "Mixture of Experts", level: 80, icon: "🧠" },
-        { name: "Prompt Engineering", level: 88, icon: "✨" },
-        { name: "Reasoning Models", level: 82, icon: "🤔" },
+        { name: "LLMs", level: 95, icon: "🤖" },
+        { name: "RAG Systems", level: 92, icon: "🔍" },
+        { name: "Mixture of Experts", level: 88, icon: "🧠" },
+        { name: "Prompt Engineering", level: 90, icon: "✨" },
+        { name: "Reasoning Models", level: 85, icon: "🤔" },
+        { name: "Multi-Agent Systems", level: 87, icon: "👥" },
       ],
     },
     {
-      title: "Vector Databases & RAG",
-      icon: Database,
+      title: "AI Frameworks & Tools",
+      icon: Cpu,
       color: "from-blue-500 to-cyan-500",
       skills: [
-        { name: "Qdrant", level: 85, icon: "🔍" },
-        { name: "Weaviate", level: 80, icon: "🕸️" },
-        { name: "FAISS", level: 90, icon: "📊" },
-        { name: "ChromaDB", level: 85, icon: "🎨" },
-        { name: "Query Transformation", level: 88, icon: "🔄" },
-        { name: "Re-ranking", level: 85, icon: "📈" },
+        { name: "PyTorch", level: 92, icon: "🔥" },
+        { name: "Transformers", level: 95, icon: "🔄" },
+        { name: "CrewAI", level: 88, icon: "🚀" },
+        { name: "LangGraph", level: 85, icon: "📊" },
+        { name: "DSPy", level: 82, icon: "🎯" },
+        { name: "Langfuse", level: 80, icon: "📈" },
       ],
     },
     {
@@ -49,41 +47,38 @@ const Skills = () => {
       icon: Eye,
       color: "from-green-500 to-emerald-500",
       skills: [
-        { name: "OpenCV", level: 95, icon: "👁️" },
-        { name: "Object Detection", level: 92, icon: "🔍" },
-        { name: "Image Processing", level: 88, icon: "🖼️" },
-        { name: "OCR", level: 85, icon: "📝" },
-        { name: "Transformers", level: 88, icon: "🔄" },
-        { name: "Language Models", level: 85, icon: "💬" },
-        { name: "NER", level: 82, icon: "🏷️" },
-        { name: "Document Processing", level: 90, icon: "📄" },
-      ],
-    },
-    {
-      title: "ML & Deep Learning",
-      icon: Cpu,
-      color: "from-orange-500 to-red-500",
-      skills: [
-        { name: "Python", level: 98, icon: "🐍" },
-        { name: "PyTorch", level: 90, icon: "🔥" },
-        { name: "Scikit-learn", level: 95, icon: "🧠" },
-        { name: "Keras", level: 85, icon: "🎯" },
-        { name: "Model Optimization", level: 88, icon: "🔧" },
-        { name: "Fine-tuning", level: 90, icon: "🎛️" },
+        { name: "Object Detection", level: 92, icon: "🎯" },
+        { name: "Image Processing", level: 90, icon: "🖼️" },
+        { name: "OCR", level: 88, icon: "📄" },
+        { name: "Language Models", level: 90, icon: "💬" },
+        { name: "NER", level: 85, icon: "🏷️" },
+        { name: "Document Processing", level: 92, icon: "📋" },
       ],
     },
     {
       title: "MLOps & Deployment",
       icon: Cloud,
+      color: "from-orange-500 to-red-500",
+      skills: [
+        { name: "Docker", level: 92, icon: "🐳" },
+        { name: "REST APIs (FastAPI)", level: 95, icon: "⚡" },
+        { name: "MLFlow", level: 88, icon: "📊" },
+        { name: "RabbitMQ", level: 85, icon: "🐰" },
+        { name: "AWS ECS", level: 80, icon: "☁️" },
+        { name: "CI/CD Pipelines", level: 82, icon: "🔄" },
+      ],
+    },
+    {
+      title: "Data Engineering",
+      icon: Database,
       color: "from-indigo-500 to-purple-500",
       skills: [
-        { name: "Docker", level: 90, icon: "🐳" },
-        { name: "REST APIs", level: 95, icon: "🌐" },
-        { name: "FastAPI Framework", level: 92, icon: "⚡" },
-        { name: "MLFlow", level: 85, icon: "📊" },
-        { name: "Weights & Biases", level: 88, icon: "📈" },
-        { name: "RabbitMQ", level: 80, icon: "🐰" },
-        { name: "Langsmith", level: 82, icon: "🔧" },
+        { name: "dbt", level: 85, icon: "🛠️" },
+        { name: "Apache Airflow", level: 87, icon: "🌊" },
+        { name: "Snowflake", level: 82, icon: "❄️" },
+        { name: "SQL", level: 88, icon: "🗃️" },
+        { name: "Data Pipelines", level: 90, icon: "🔗" },
+        { name: "ETL/ELT", level: 85, icon: "🔄" },
       ],
     },
     {
@@ -92,11 +87,11 @@ const Skills = () => {
       color: "from-teal-500 to-green-500",
       skills: [
         { name: "Python", level: 98, icon: "🐍" },
-        { name: "Git", level: 90, icon: "📝" },
-        { name: "Jupyter", level: 85, icon: "📓" },
-        { name: "VS Code", level: 90, icon: "💻" },
-        { name: "SQL", level: 85, icon: "🗃️" },
-        { name: "NoSQL", level: 80, icon: "📊" },
+        { name: "C++", level: 75, icon: "⚙️" },
+        { name: "Javascript", level: 70, icon: "📜" },
+        { name: "Git", level: 90, icon: "📚" },
+        { name: "VS Code", level: 92, icon: "💻" },
+        { name: "Jupyter", level: 88, icon: "📓" },
       ],
     },
   ];
@@ -188,7 +183,7 @@ const Skills = () => {
                 AI/ML Frameworks
               </h4>
               <p className="text-gray-300 text-sm">
-                PyTorch, Transformers, LangChain ecosystem
+                PyTorch, Transformers, CrewAI, LangGraph
               </p>
             </div>
 
@@ -198,17 +193,17 @@ const Skills = () => {
                 Production Deployment
               </h4>
               <p className="text-gray-300 text-sm">
-                Docker, REST APIs, MLOps pipelines
+                Docker, FastAPI, MLOps pipelines, AWS
               </p>
             </div>
 
             <div className="bg-slate-900/50 backdrop-blur-sm rounded-xl p-6 border border-orange-400/30 text-center">
-              <div className="text-4xl mb-4">👁️</div>
+              <div className="text-4xl mb-4">🔄</div>
               <h4 className="text-orange-400 font-semibold mb-2">
-                Computer Vision
+                Data Engineering
               </h4>
               <p className="text-gray-300 text-sm">
-                OpenCV, Object Detection, Image Processing
+                dbt, Airflow, Snowflake, ETL pipelines
               </p>
             </div>
           </div>
