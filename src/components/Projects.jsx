@@ -11,6 +11,7 @@ import {
   Play,
   Code,
   Zap,
+  Cpu,
 } from "lucide-react";
 
 const Projects = () => {
@@ -23,7 +24,7 @@ const Projects = () => {
       description:
         "Flexible framework for building configurable LLM agents with customizable tools, prompts, and behaviors. Demonstrates advanced prompt engineering and tool integration for autonomous AI systems.",
       image:
-        "https://images.pexels.com/photos/30530414/pexels-photo-30530414.jpeg?_gl=1*msgyd7*_ga*MTMxNzE0MDQ4MC4xNzU3MjY3ODI0*_ga_8JE65Q40S6*czE3NzA1NDExNTckbzMkZzEkdDE3NzA1NDExNzgkajM5JGwwJGgw",
+        "https://images.pexels.com/photos/30530414/pexels-photo-30530414.jpeg?auto=compress&cs=tinysrgb&w=800",
       technologies: [
         "LLMs",
         "Agent Architecture",
@@ -33,6 +34,18 @@ const Projects = () => {
       github: "https://github.com/thatAverageGuy/configurable-agents",
       icon: Code,
       color: "from-indigo-500 to-purple-500",
+    },
+    {
+      title: "Mono-Quant",
+      category: "Model Optimization",
+      description:
+        "Efficient model quantization framework for deploying large models in resource-constrained environments. Optimizes inference performance without sacrificing accuracy.",
+      image:
+        "https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=800",
+      technologies: ["Quantization", "PyTorch", "Model Optimization", "ONNX"],
+      github: "https://github.com/thatAverageGuy/mono-quant",
+      icon: Cpu,
+      color: "from-blue-600 to-cyan-600",
     },
     {
       title: "EarlyFusion Visual Question Answering",
@@ -87,6 +100,27 @@ const Projects = () => {
       github: "https://github.com/thatAverageGuy/Sketcher",
       icon: Palette,
       color: "from-orange-500 to-red-500",
+    },
+  ];
+
+  const openSourceProjects = [
+    {
+      title: "Configurable Agents Framework",
+      description:
+        "Production-ready framework for building LLM agents with customizable tools, prompts, and behaviors. Modular architecture enabling rapid agent development and deployment.",
+      technologies: ["LLMs", "Python", "Agent Architecture", "CrewAI"],
+      github: "https://github.com/thatAverageGuy/configurable-agents",
+      stars: "⭐",
+      gradient: "from-indigo-600 via-purple-600 to-pink-600",
+    },
+    {
+      title: "Mono-Quant",
+      description:
+        "Efficient model quantization framework for deploying large models in resource-constrained environments. Optimizes inference without sacrificing accuracy through advanced quantization techniques.",
+      technologies: ["Quantization", "PyTorch", "Model Optimization", "ONNX"],
+      github: "https://github.com/thatAverageGuy/mono-quant",
+      stars: "⭐",
+      gradient: "from-blue-600 via-cyan-600 to-teal-600",
     },
   ];
 
@@ -209,13 +243,6 @@ const Projects = () => {
                               <Github size={18} />
                               <span>Source Code</span>
                             </a>
-                            {/* Live Demo button commented out as requested */}
-                            {/* 
-                            <button className="flex items-center space-x-2 bg-gradient-to-r from-blue-500 to-green-400 text-white px-4 py-2 rounded-lg hover:from-blue-600 hover:to-green-500 transition-all">
-                              <Play size={18} />
-                              <span>Live Demo</span>
-                            </button>
-                            */}
                           </div>
                         </div>
 
@@ -261,6 +288,73 @@ const Projects = () => {
                 />
               ))}
             </div>
+          </div>
+        </div>
+
+        {/* Open Source Initiatives */}
+        <div className="max-w-6xl mx-auto mb-20">
+          <div className="text-center mb-12">
+            <h3 className="text-3xl font-bold text-white mb-4">
+              🚀 Open Source Initiatives
+            </h3>
+            <p className="text-gray-400 max-w-2xl mx-auto">
+              Community-driven projects advancing AI development and deployment
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            {openSourceProjects.map((project, index) => (
+              <div
+                key={index}
+                className="group relative bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-blue-400/50 transition-all duration-300 hover:transform hover:scale-105"
+              >
+                {/* Gradient background on hover */}
+                <div
+                  className={`absolute inset-0 bg-gradient-to-br ${project.gradient} opacity-0 group-hover:opacity-10 rounded-2xl transition-opacity duration-300`}
+                ></div>
+
+                <div className="relative z-10">
+                  <div className="flex items-start justify-between mb-4">
+                    <div
+                      className={`p-3 rounded-lg bg-gradient-to-br ${project.gradient}`}
+                    >
+                      <Code className="text-white" size={28} />
+                    </div>
+                    <span className="text-2xl">{project.stars}</span>
+                  </div>
+
+                  <h4 className="text-2xl font-bold text-white mb-3">
+                    {project.title}
+                  </h4>
+
+                  <p className="text-gray-300 mb-6 leading-relaxed">
+                    {project.description}
+                  </p>
+
+                  <div className="flex flex-wrap gap-2 mb-6">
+                    {project.technologies.map((tech, techIndex) => (
+                      <span
+                        key={techIndex}
+                        className="px-3 py-1 bg-blue-500/20 text-blue-300 rounded-full text-sm"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center space-x-2 bg-gray-900 text-white px-5 py-3 rounded-lg hover:bg-gray-800 transition-all group-hover:bg-gradient-to-r group-hover:from-blue-500 group-hover:to-green-400"
+                  >
+                    <Github size={20} />
+                    <span className="font-medium">View on GitHub</span>
+                    <ExternalLink size={16} />
+                  </a>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
 
