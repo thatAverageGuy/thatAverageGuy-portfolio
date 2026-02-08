@@ -18,6 +18,23 @@ const Projects = () => {
 
   const featuredProjects = [
     {
+      title: "Configurable Agents Framework",
+      category: "LLM Agent Development",
+      description:
+        "Flexible framework for building configurable LLM agents with customizable tools, prompts, and behaviors. Demonstrates advanced prompt engineering and tool integration for autonomous AI systems.",
+      image:
+        "https://images.pexels.com/photos/30530414/pexels-photo-30530414.jpeg?_gl=1*msgyd7*_ga*MTMxNzE0MDQ4MC4xNzU3MjY3ODI0*_ga_8JE65Q40S6*czE3NzA1NDExNTckbzMkZzEkdDE3NzA1NDExNzgkajM5JGwwJGgw",
+      technologies: [
+        "LLMs",
+        "Agent Architecture",
+        "Python",
+        "Tool Integration",
+      ],
+      github: "https://github.com/thatAverageGuy/configurable-agents",
+      icon: Code,
+      color: "from-indigo-500 to-purple-500",
+    },
+    {
       title: "EarlyFusion Visual Question Answering",
       category: "Multi-Modal AI Research",
       description:

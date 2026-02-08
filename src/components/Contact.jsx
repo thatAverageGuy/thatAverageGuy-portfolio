@@ -29,7 +29,7 @@ const Contact = () => {
       "https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js";
     script.onload = () => {
       // Initialize EmailJS with your public key
-      window.emailjs.init("ybdARx6UjtAjlu9kG"); // Replace with your actual public key
+      window.emailjs.init(import.meta.env.VITE_EMAILJS_PUBLIC_KEY); // Replace with your actual public key
     };
     document.head.appendChild(script);
 
@@ -68,8 +68,8 @@ const Contact = () => {
 
       // Send email using EmailJS
       const result = await window.emailjs.send(
-        "service_gr58y38", // Replace with your service ID
-        "template_75j8rh5", // Replace with your template ID
+        import.meta.env.VITE_EMAILJS_SERVICE_ID, // Replace with your service ID
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID, // Replace with your template ID
         templateParams
       );
 
