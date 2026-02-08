@@ -12,41 +12,13 @@ import {
   Code,
   Zap,
   Cpu,
+  Terminal,
 } from "lucide-react";
 
 const Projects = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const featuredProjects = [
-    {
-      title: "Configurable Agents Framework",
-      category: "LLM Agent Development",
-      description:
-        "Flexible framework for building configurable LLM agents with customizable tools, prompts, and behaviors. Demonstrates advanced prompt engineering and tool integration for autonomous AI systems.",
-      image:
-        "https://images.pexels.com/photos/30530414/pexels-photo-30530414.jpeg?auto=compress&cs=tinysrgb&w=800",
-      technologies: [
-        "LLMs",
-        "Agent Architecture",
-        "Python",
-        "Tool Integration",
-      ],
-      github: "https://github.com/thatAverageGuy/configurable-agents",
-      icon: Code,
-      color: "from-indigo-500 to-purple-500",
-    },
-    {
-      title: "Mono-Quant",
-      category: "Model Optimization",
-      description:
-        "Efficient model quantization framework for deploying large models in resource-constrained environments. Optimizes inference performance without sacrificing accuracy.",
-      image:
-        "https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=800",
-      technologies: ["Quantization", "PyTorch", "Model Optimization", "ONNX"],
-      github: "https://github.com/thatAverageGuy/mono-quant",
-      icon: Cpu,
-      color: "from-blue-600 to-cyan-600",
-    },
     {
       title: "EarlyFusion Visual Question Answering",
       category: "Multi-Modal AI Research",
@@ -78,28 +50,50 @@ const Projects = () => {
       color: "from-blue-500 to-cyan-500",
     },
     {
-      title: "Hand Tracking System",
-      category: "Real-Time CV Application",
+      title: "Custom Unix Shell in Rust",
+      category: "Systems Programming",
       description:
-        "CPU-optimized real-time hand tracking using MediaPipe and OpenCV. Enables gesture-based interactions without GPU requirements.",
+        "A POSIX-like command-line shell built from scratch in Rust as part of the CodeCrafters challenge. Implements a REPL, built-in commands, PATH-based command execution, and process management to understand how real shells work internally.",
       image:
-        "https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=800",
-      technologies: ["OpenCV", "MediaPipe", "Python", "Real-time Processing"],
-      github: "https://github.com/thatAverageGuy/HandTracking",
-      icon: Hand,
-      color: "from-green-500 to-emerald-500",
+        "https://images.pexels.com/photos/1181675/pexels-photo-1181675.jpeg?auto=compress&cs=tinysrgb&w=800",
+      technologies: [
+        "Rust",
+        "Systems Programming",
+        "CLI",
+        "Process Management",
+      ],
+      github: "https://github.com/thatAverageGuy/codecrafters-shell-rust",
+      icon: Terminal,
+      color: "from-gray-700 to-gray-900",
     },
-    {
-      title: "Live Sketcher Application",
-      category: "Creative AI",
+     {
+      title: "Configurable Agents Framework",
+      category: "LLM Agent Development",
       description:
-        "Real-time artistic transformation of camera input using OpenCV. Creative application of computer vision for artistic purposes with edge detection algorithms.",
+        "Flexible framework for building configurable LLM agents with customizable tools, prompts, and behaviors. Demonstrates advanced prompt engineering and tool integration for autonomous AI systems.",
       image:
-        "https://images.pexels.com/photos/1000366/pexels-photo-1000366.jpeg?auto=compress&cs=tinysrgb&w=800",
-      technologies: ["OpenCV", "Python", "Image Processing", "Edge Detection"],
-      github: "https://github.com/thatAverageGuy/Sketcher",
-      icon: Palette,
-      color: "from-orange-500 to-red-500",
+        "https://images.pexels.com/photos/30530414/pexels-photo-30530414.jpeg?auto=compress&cs=tinysrgb&w=800",
+      technologies: [
+        "LLMs",
+        "Agent Architecture",
+        "Python",
+        "Tool Integration",
+      ],
+      github: "https://github.com/thatAverageGuy/configurable-agents",
+      icon: Code,
+      color: "from-indigo-500 to-purple-500",
+    },
+     {
+      title: "Mono-Quant",
+      category: "Model Optimization",
+      description:
+        "Efficient model quantization framework for deploying large models in resource-constrained environments. Optimizes inference performance without sacrificing accuracy.",
+      image:
+        "https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=800",
+      technologies: ["Quantization", "PyTorch", "Model Optimization", "ONNX"],
+      github: "https://github.com/thatAverageGuy/mono-quant",
+      icon: Cpu,
+      color: "from-blue-600 to-cyan-600",
     },
   ];
 
@@ -163,7 +157,7 @@ const Projects = () => {
 
   const prevSlide = () => {
     setCurrentSlide(
-      (prev) => (prev - 1 + featuredProjects.length) % featuredProjects.length
+      (prev) => (prev - 1 + featuredProjects.length) % featuredProjects.length,
     );
   };
 
