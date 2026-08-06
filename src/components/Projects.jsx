@@ -4,15 +4,16 @@ import {
   ExternalLink,
   Eye,
   Brain,
-  Hand,
-  Palette,
   ChevronLeft,
   ChevronRight,
-  Play,
   Code,
   Zap,
   Cpu,
   Terminal,
+  Stethoscope,
+  Car,
+  ShieldAlert,
+  Activity,
 } from "lucide-react";
 
 const Projects = () => {
@@ -23,77 +24,46 @@ const Projects = () => {
       title: "EarlyFusion Visual Question Answering",
       category: "Multi-Modal AI Research",
       description:
-        "Advanced Streamlit application demonstrating multi-modal AI combining vision and language processing. Bridges research and practical application of VQA systems.",
-      image:
-        "https://images.pexels.com/photos/8386434/pexels-photo-8386434.jpeg?auto=compress&cs=tinysrgb&w=800",
-      technologies: [
-        "PyTorch",
-        "Streamlit",
-        "Multi-Modal AI",
-        "Vision-Language Models",
-      ],
+        "A Streamlit application demonstrating multi-modal AI combining vision and language processing. Built to bridge research and practical application of VQA systems — not just cite the paper.",
+      technologies: ["PyTorch", "Streamlit", "Multi-Modal AI", "Vision-Language Models"],
       github: "https://github.com/thatAverageGuy/EarlyFusion-on-EasyVQA",
       icon: Brain,
-      color: "from-purple-500 to-pink-500",
     },
     {
       title: "Real-Time Object Detection in Browser",
       category: "Production Computer Vision",
       description:
-        "Browser-based real-time object detection using custom-trained YOLOv5 models. Optimized for web deployment with custom connector detection capabilities.",
-      image:
-        "https://images.pexels.com/photos/2599244/pexels-photo-2599244.jpeg?auto=compress&cs=tinysrgb&w=800",
+        "Browser-based real-time object detection using custom-trained YOLOv5 models, optimized for web deployment with custom connector detection.",
       technologies: ["YOLOv5", "OpenCV", "Streamlit", "Custom Training"],
-      github:
-        "https://github.com/thatAverageGuy/Real-Time-Object-Detection-in-Browser",
+      github: "https://github.com/thatAverageGuy/Real-Time-Object-Detection-in-Browser",
       icon: Eye,
-      color: "from-blue-500 to-cyan-500",
     },
     {
       title: "Custom Unix Shell in Rust",
       category: "Systems Programming",
       description:
-        "A POSIX-like command-line shell built from scratch in Rust as part of the CodeCrafters challenge. Implements a REPL, built-in commands, PATH-based command execution, and process management to understand how real shells work internally.",
-      image:
-        "https://images.pexels.com/photos/1181675/pexels-photo-1181675.jpeg?auto=compress&cs=tinysrgb&w=800",
-      technologies: [
-        "Rust",
-        "Systems Programming",
-        "CLI",
-        "Process Management",
-      ],
+        "A POSIX-like command-line shell built from scratch in Rust for the CodeCrafters challenge — REPL, built-ins, PATH resolution, and process management, to understand how real shells actually work.",
+      technologies: ["Rust", "Systems Programming", "CLI", "Process Management"],
       github: "https://github.com/thatAverageGuy/codecrafters-shell-rust",
       icon: Terminal,
-      color: "from-gray-700 to-gray-900",
     },
-     {
+    {
       title: "Configurable Agents Framework",
       category: "LLM Agent Development",
       description:
-        "Flexible framework for building configurable LLM agents with customizable tools, prompts, and behaviors. Demonstrates advanced prompt engineering and tool integration for autonomous AI systems.",
-      image:
-        "https://images.pexels.com/photos/30530414/pexels-photo-30530414.jpeg?auto=compress&cs=tinysrgb&w=800",
-      technologies: [
-        "LLMs",
-        "Agent Architecture",
-        "Python",
-        "Tool Integration",
-      ],
+        "A flexible framework for building configurable LLM agents with swappable tools, prompts, and behaviors — for when hardcoding one more agent by hand stops being fun.",
+      technologies: ["LLMs", "Agent Architecture", "Python", "Tool Integration"],
       github: "https://github.com/thatAverageGuy/configurable-agents",
       icon: Code,
-      color: "from-indigo-500 to-purple-500",
     },
-     {
+    {
       title: "Mono-Quant",
       category: "Model Optimization",
       description:
-        "Efficient model quantization framework for deploying large models in resource-constrained environments. Optimizes inference performance without sacrificing accuracy.",
-      image:
-        "https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=800",
+        "A model quantization framework for deploying large models in resource-constrained environments, optimizing inference without giving up accuracy.",
       technologies: ["Quantization", "PyTorch", "Model Optimization", "ONNX"],
       github: "https://github.com/thatAverageGuy/mono-quant",
       icon: Cpu,
-      color: "from-blue-600 to-cyan-600",
     },
   ];
 
@@ -101,20 +71,16 @@ const Projects = () => {
     {
       title: "Configurable Agents Framework",
       description:
-        "Production-ready framework for building LLM agents with customizable tools, prompts, and behaviors. Modular architecture enabling rapid agent development and deployment.",
+        "Production-ready framework for building LLM agents with customizable tools, prompts, and behaviors. Modular architecture for rapid agent development and deployment.",
       technologies: ["LLMs", "Python", "Agent Architecture", "CrewAI"],
       github: "https://github.com/thatAverageGuy/configurable-agents",
-      stars: "⭐",
-      gradient: "from-indigo-600 via-purple-600 to-pink-600",
     },
     {
       title: "Mono-Quant",
       description:
-        "Efficient model quantization framework for deploying large models in resource-constrained environments. Optimizes inference without sacrificing accuracy through advanced quantization techniques.",
+        "Efficient model quantization framework for deploying large models in resource-constrained environments through advanced quantization techniques.",
       technologies: ["Quantization", "PyTorch", "Model Optimization", "ONNX"],
       github: "https://github.com/thatAverageGuy/mono-quant",
-      stars: "⭐",
-      gradient: "from-blue-600 via-cyan-600 to-teal-600",
     },
   ];
 
@@ -122,32 +88,32 @@ const Projects = () => {
     {
       title: "Medical Document AI",
       description: "78% accuracy on borderless table extraction",
-      impact: "Revolutionized medical data processing",
-      icon: "🏥",
+      impact: "Cut manual medical data entry down to a review step",
+      icon: Stethoscope,
     },
     {
       title: "Vehicle Tracking",
       description: "Real-time detection and tracking for driving schools",
-      impact: "Automated driving assessment system",
-      icon: "🚗",
+      impact: "Automated a driving assessment that used to be a clipboard",
+      icon: Car,
     },
     {
       title: "LLaMA-2 Fine-tuning",
       description: "Custom model optimization for proprietary datasets",
-      impact: "Enhanced domain-specific AI performance",
-      icon: "🤖",
+      impact: "Domain-specific accuracy, generic-model cost",
+      icon: Brain,
     },
     {
       title: "Fraud Detection",
       description: "Insurance claims analysis and anomaly detection",
       impact: "Reduced fraudulent claims by 40%",
-      icon: "🔍",
+      icon: ShieldAlert,
     },
     {
       title: "Tuberculosis Detection",
       description: "Medical imaging AI for chest X-ray analysis",
-      impact: "Early disease detection system",
-      icon: "🔬",
+      impact: "Earlier detection, faster triage",
+      icon: Activity,
     },
   ];
 
@@ -156,63 +122,59 @@ const Projects = () => {
   };
 
   const prevSlide = () => {
-    setCurrentSlide(
-      (prev) => (prev - 1 + featuredProjects.length) % featuredProjects.length,
-    );
+    setCurrentSlide((prev) => (prev - 1 + featuredProjects.length) % featuredProjects.length);
   };
 
   return (
-    <section id="projects" className="py-20 bg-slate-900">
+    <section id="projects" className="py-20 bg-term-bg border-t border-term-border">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            Innovation Showcase
+        <div className="mb-16">
+          <p className="font-mono text-sm text-term-accent mb-3">
+            <span className="text-term-dim">$</span> ls -la projects/
+          </p>
+          <h2 className="text-3xl md:text-4xl font-bold text-term-text mb-4">
+            Things I've built
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-green-400 mx-auto mb-8"></div>
-          <p className="text-gray-400 max-w-2xl mx-auto text-lg">
-            From research prototypes to production systems, explore the diverse
-            range of AI solutions I've built
+          <p className="text-term-muted max-w-2xl">
+            From research prototypes to production systems — the ones that shipped, and a couple
+            I just built because I was curious how they'd break.
           </p>
         </div>
 
         {/* Featured Projects Carousel */}
         <div className="max-w-6xl mx-auto mb-20">
-          <h3 className="text-2xl font-bold text-white mb-8 text-center">
-            Featured Projects
-          </h3>
+          <h3 className="font-mono text-sm text-term-dim mb-6">// featured</h3>
 
           <div className="relative">
-            <div className="overflow-hidden rounded-2xl">
+            <div className="overflow-hidden rounded-lg">
               <div
                 className="flex transition-transform duration-500 ease-in-out"
                 style={{ transform: `translateX(-${currentSlide * 100}%)` }}
               >
                 {featuredProjects.map((project, index) => (
                   <div key={index} className="min-w-full">
-                    <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl overflow-hidden border border-white/10">
+                    <div className="bg-term-surface rounded-lg overflow-hidden border border-term-border">
                       <div className="grid lg:grid-cols-2 gap-8 p-8">
                         {/* Project info */}
-                        <div className="space-y-6">
-                          <div className="flex items-center space-x-3">
-                            <div
-                              className={`w-12 h-12 rounded-lg bg-gradient-to-br ${project.color} flex items-center justify-center`}
-                            >
+                        <div className="space-y-6 order-2 lg:order-1">
+                          <div className="flex items-center gap-3">
+                            <div className="w-10 h-10 rounded bg-term-bg border border-term-border flex items-center justify-center flex-shrink-0">
                               {React.createElement(project.icon, {
-                                className: "text-white",
-                                size: 24,
+                                className: "text-term-accent",
+                                size: 20,
                               })}
                             </div>
                             <div>
-                              <h4 className="text-2xl font-bold text-white">
+                              <h4 className="text-xl font-bold text-term-text">
                                 {project.title}
                               </h4>
-                              <p className="text-blue-400">
+                              <p className="text-term-accent text-sm font-mono">
                                 {project.category}
                               </p>
                             </div>
                           </div>
 
-                          <p className="text-gray-300 text-lg leading-relaxed">
+                          <p className="text-term-muted leading-relaxed">
                             {project.description}
                           </p>
 
@@ -220,34 +182,45 @@ const Projects = () => {
                             {project.technologies.map((tech, techIndex) => (
                               <span
                                 key={techIndex}
-                                className="px-3 py-1 bg-blue-500/20 text-blue-300 rounded-full text-sm"
+                                className="px-2.5 py-1 bg-term-bg border border-term-border text-term-muted rounded text-xs font-mono"
                               >
                                 {tech}
                               </span>
                             ))}
                           </div>
 
-                          <div className="flex space-x-4">
-                            <a
-                              href={project.github}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="flex items-center space-x-2 bg-gray-800 text-white px-4 py-2 rounded-lg hover:bg-gray-700 transition-colors"
-                            >
-                              <Github size={18} />
-                              <span>Source Code</span>
-                            </a>
-                          </div>
+                          <a
+                            href={project.github}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-2 border border-term-border text-term-text px-4 py-2 rounded hover:border-term-accent hover:text-term-accent transition-colors font-mono text-sm"
+                          >
+                            <Github size={16} />
+                            <span>source code</span>
+                          </a>
                         </div>
 
-                        {/* Project image */}
-                        <div className="relative">
-                          <img
-                            src={project.image}
-                            alt={project.title}
-                            className="w-full h-64 lg:h-80 object-cover rounded-xl"
-                          />
-                          <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent rounded-xl"></div>
+                        {/* Terminal-style panel */}
+                        <div className="order-1 lg:order-2 bg-term-bg rounded-lg border border-term-border overflow-hidden">
+                          <div className="flex items-center gap-1.5 px-4 py-3 border-b border-term-border">
+                            <span className="w-2.5 h-2.5 rounded-full bg-term-border"></span>
+                            <span className="w-2.5 h-2.5 rounded-full bg-term-border"></span>
+                            <span className="w-2.5 h-2.5 rounded-full bg-term-border"></span>
+                            <span className="ml-2 text-term-dim text-xs font-mono">readme.md</span>
+                          </div>
+                          <div className="p-5 font-mono text-xs leading-relaxed">
+                            <p className="text-term-dim">$ git log -1 --format="%s"</p>
+                            <p className="text-term-text mt-1"># {project.title}</p>
+                            <p className="text-term-muted mt-3">$ cat topics.txt</p>
+                            <p className="text-term-accent mt-1">{project.category}</p>
+                            <p className="text-term-muted mt-3">$ ls stack/</p>
+                            <p className="text-term-text mt-1">
+                              {project.technologies.join("  ")}
+                            </p>
+                            <p className="text-term-dim mt-4">
+                              $ <span className="cursor-blink">_</span>
+                            </p>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -259,25 +232,28 @@ const Projects = () => {
             {/* Navigation buttons */}
             <button
               onClick={prevSlide}
-              className="absolute left-4 top-1/2 -translate-y-1/2 bg-slate-800/80 backdrop-blur-sm text-white p-3 rounded-full hover:bg-slate-700 transition-all"
+              className="absolute left-2 md:-left-4 top-1/2 -translate-y-1/2 bg-term-surface border border-term-border text-term-text p-2.5 rounded-full hover:border-term-accent transition-all"
+              aria-label="Previous project"
             >
-              <ChevronLeft size={24} />
+              <ChevronLeft size={20} />
             </button>
             <button
               onClick={nextSlide}
-              className="absolute right-4 top-1/2 -translate-y-1/2 bg-slate-800/80 backdrop-blur-sm text-white p-3 rounded-full hover:bg-slate-700 transition-all"
+              className="absolute right-2 md:-right-4 top-1/2 -translate-y-1/2 bg-term-surface border border-term-border text-term-text p-2.5 rounded-full hover:border-term-accent transition-all"
+              aria-label="Next project"
             >
-              <ChevronRight size={24} />
+              <ChevronRight size={20} />
             </button>
 
             {/* Slide indicators */}
-            <div className="flex justify-center space-x-2 mt-6">
+            <div className="flex justify-center gap-2 mt-6">
               {featuredProjects.map((_, index) => (
                 <button
                   key={index}
                   onClick={() => setCurrentSlide(index)}
-                  className={`w-3 h-3 rounded-full transition-all ${
-                    index === currentSlide ? "bg-blue-400" : "bg-gray-600"
+                  aria-label={`Go to project ${index + 1}`}
+                  className={`w-2 h-2 rounded-full transition-all ${
+                    index === currentSlide ? "bg-term-accent w-6" : "bg-term-border"
                   }`}
                 />
               ))}
@@ -287,66 +263,49 @@ const Projects = () => {
 
         {/* Open Source Initiatives */}
         <div className="max-w-6xl mx-auto mb-20">
-          <div className="text-center mb-12">
-            <h3 className="text-3xl font-bold text-white mb-4">
-              🚀 Open Source Initiatives
-            </h3>
-            <p className="text-gray-400 max-w-2xl mx-auto">
-              Community-driven projects advancing AI development and deployment
-            </p>
-          </div>
+          <h3 className="font-mono text-sm text-term-dim mb-6">// open source</h3>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 gap-6">
             {openSourceProjects.map((project, index) => (
               <div
                 key={index}
-                className="group relative bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-blue-400/50 transition-all duration-300 hover:transform hover:scale-105"
+                className="bg-term-surface rounded-lg p-8 border border-term-border hover:border-term-accent/40 transition-all duration-300"
               >
-                {/* Gradient background on hover */}
-                <div
-                  className={`absolute inset-0 bg-gradient-to-br ${project.gradient} opacity-0 group-hover:opacity-10 rounded-2xl transition-opacity duration-300`}
-                ></div>
-
-                <div className="relative z-10">
-                  <div className="flex items-start justify-between mb-4">
-                    <div
-                      className={`p-3 rounded-lg bg-gradient-to-br ${project.gradient}`}
-                    >
-                      <Code className="text-white" size={28} />
-                    </div>
-                    <span className="text-2xl">{project.stars}</span>
+                <div className="flex items-start justify-between mb-4">
+                  <div className="w-11 h-11 rounded bg-term-bg border border-term-border flex items-center justify-center">
+                    <Code className="text-term-accent" size={22} />
                   </div>
-
-                  <h4 className="text-2xl font-bold text-white mb-3">
-                    {project.title}
-                  </h4>
-
-                  <p className="text-gray-300 mb-6 leading-relaxed">
-                    {project.description}
-                  </p>
-
-                  <div className="flex flex-wrap gap-2 mb-6">
-                    {project.technologies.map((tech, techIndex) => (
-                      <span
-                        key={techIndex}
-                        className="px-3 py-1 bg-blue-500/20 text-blue-300 rounded-full text-sm"
-                      >
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
-
-                  <a
-                    href={project.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center space-x-2 bg-gray-900 text-white px-5 py-3 rounded-lg hover:bg-gray-800 transition-all group-hover:bg-gradient-to-r group-hover:from-blue-500 group-hover:to-green-400"
-                  >
-                    <Github size={20} />
-                    <span className="font-medium">View on GitHub</span>
-                    <ExternalLink size={16} />
-                  </a>
                 </div>
+
+                <h4 className="text-xl font-bold text-term-text mb-3">
+                  {project.title}
+                </h4>
+
+                <p className="text-term-muted mb-6 leading-relaxed text-sm">
+                  {project.description}
+                </p>
+
+                <div className="flex flex-wrap gap-2 mb-6">
+                  {project.technologies.map((tech, techIndex) => (
+                    <span
+                      key={techIndex}
+                      className="px-2.5 py-1 bg-term-bg border border-term-border text-term-muted rounded text-xs font-mono"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+
+                <a
+                  href={project.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 border border-term-border text-term-text px-4 py-2.5 rounded hover:border-term-accent hover:text-term-accent transition-all font-mono text-sm"
+                >
+                  <Github size={16} />
+                  <span>view on github</span>
+                  <ExternalLink size={13} />
+                </a>
               </div>
             ))}
           </div>
@@ -354,30 +313,27 @@ const Projects = () => {
 
         {/* Professional Projects */}
         <div className="max-w-6xl mx-auto">
-          <h3 className="text-2xl font-bold text-white mb-8 text-center">
-            Professional Projects Highlights
-          </h3>
+          <h3 className="font-mono text-sm text-term-dim mb-6">// professional highlights</h3>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
             {professionalProjects.map((project, index) => (
               <div
                 key={index}
-                className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-blue-400/30 transition-all duration-300 hover:transform hover:scale-105"
+                className="bg-term-surface rounded-lg p-6 border border-term-border hover:border-term-accent/40 transition-all duration-300"
               >
-                <div className="text-center">
-                  <div className="text-4xl mb-4">{project.icon}</div>
-                  <h4 className="text-lg font-semibold text-white mb-2">
-                    {project.title}
-                  </h4>
-                  <p className="text-gray-400 text-sm mb-3">
-                    {project.description}
-                  </p>
-                  <div className="flex items-center justify-center space-x-2">
-                    <Zap className="text-green-400" size={16} />
-                    <span className="text-green-400 text-sm font-medium">
-                      {project.impact}
-                    </span>
-                  </div>
+                <div className="w-10 h-10 rounded bg-term-bg border border-term-border flex items-center justify-center mb-4">
+                  {React.createElement(project.icon, {
+                    className: "text-term-accent",
+                    size: 20,
+                  })}
+                </div>
+                <h4 className="text-term-text font-semibold mb-2">{project.title}</h4>
+                <p className="text-term-muted text-sm mb-4">{project.description}</p>
+                <div className="flex items-start gap-2">
+                  <Zap className="text-term-accent mt-0.5 flex-shrink-0" size={14} />
+                  <span className="text-term-accent text-xs leading-relaxed">
+                    {project.impact}
+                  </span>
                 </div>
               </div>
             ))}

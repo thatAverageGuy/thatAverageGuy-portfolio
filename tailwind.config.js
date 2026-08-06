@@ -5,11 +5,19 @@ export default {
     extend: {
       fontFamily: {
         'sans': ['Inter', 'system-ui', 'sans-serif'],
+        'mono': ['"JetBrains Mono"', 'ui-monospace', 'Consolas', 'monospace'],
       },
       colors: {
-        'deep-navy': '#0d1421',
-        'electric-blue': '#1e88e5',
-        'accent-green': '#00e676',
+        'term-bg': '#0b0d10',
+        'term-surface': '#12151a',
+        'term-surface-hi': '#171b21',
+        'term-border': '#1e2126',
+        'term-text': '#e8e4d9',
+        'term-muted': '#8b8f96',
+        'term-dim': '#5b5f66',
+        'term-accent': '#c9a15f',
+        'term-accent-dim': '#8a7247',
+        'term-ok': '#7fae8e',
       },
       animation: {
         'fade-in': 'fadeIn 0.5s ease-in-out',

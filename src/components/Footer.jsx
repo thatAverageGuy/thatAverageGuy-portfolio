@@ -1,13 +1,5 @@
 import React from "react";
-import {
-  Heart,
-  Code,
-  Coffee,
-  Github,
-  Linkedin,
-  Mail,
-  ArrowUp,
-} from "lucide-react";
+import { Github, Linkedin, Mail, ArrowUp } from "lucide-react";
 
 const Footer = () => {
   const scrollToTop = () => {
@@ -17,25 +9,17 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   const socialLinks = [
-    {
-      icon: Github,
-      href: "https://github.com/thatAverageGuy",
-      label: "GitHub",
-    },
-    {
-      icon: Linkedin,
-      href: "https://www.linkedin.com/in/yogi893/",
-      label: "LinkedIn",
-    },
+    { icon: Github, href: "https://github.com/thatAverageGuy", label: "GitHub" },
+    { icon: Linkedin, href: "https://www.linkedin.com/in/yogi893/", label: "LinkedIn" },
     { icon: Mail, href: "mailto:yogesh.singh893@gmail.com", label: "Email" },
   ];
 
   const quickLinks = [
-    { name: "About", href: "#about" },
-    { name: "Experience", href: "#experience" },
-    { name: "Skills", href: "#skills" },
-    { name: "Projects", href: "#projects" },
-    { name: "Contact", href: "#contact" },
+    { name: "about", href: "#about" },
+    { name: "experience", href: "#experience" },
+    { name: "skills", href: "#skills" },
+    { name: "projects", href: "#projects" },
+    { name: "contact", href: "#contact" },
   ];
 
   const scrollToSection = (href) => {
@@ -46,47 +30,33 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-slate-900 border-t border-white/10">
+    <footer className="bg-term-bg border-t border-term-border">
       <div className="container mx-auto px-4 py-16">
         <div className="grid md:grid-cols-3 gap-12">
           {/* Brand and Description */}
-          <div className="space-y-6">
-            <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-green-400 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-lg">Y</span>
-              </div>
-              <span className="text-white font-bold text-xl">
-                Yogesh Kumar Singh
-              </span>
+          <div className="space-y-5">
+            <div className="flex items-center gap-2 font-mono text-lg">
+              <span className="text-term-text font-semibold">yks</span>
+              <span className="text-term-accent">.dev</span>
             </div>
 
-            <p className="text-gray-400 leading-relaxed">
-              Senior ML Engineer at Cisco & AI Entrepreneur. Transforming ideas
-              into intelligent solutions through cutting-edge AI research and
-              practical applications.
+            <p className="text-term-muted leading-relaxed text-sm">
+              Senior Software Engineer — ML &amp; Agentic AI. Turning tea into commits,
+              and prompts into systems that hold up in production.
             </p>
-
-            <div className="flex items-center space-x-2 text-gray-400">
-              <span>Made with</span>
-              <Heart className="text-red-400" size={16} />
-              <span>and</span>
-              <Code className="text-blue-400" size={16} />
-              <span>powered by</span>
-              <Coffee className="text-yellow-400" size={16} />
-            </div>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-white font-semibold mb-6">Quick Links</h3>
+            <h3 className="font-mono text-xs text-term-dim mb-5">// navigate</h3>
             <ul className="space-y-3">
               {quickLinks.map((link, index) => (
                 <li key={index}>
                   <button
                     onClick={() => scrollToSection(link.href)}
-                    className="text-gray-400 hover:text-blue-400 transition-colors duration-200"
+                    className="text-term-muted hover:text-term-accent transition-colors duration-200 font-mono text-sm"
                   >
-                    {link.name}
+                    cd {link.name}
                   </button>
                 </li>
               ))}
@@ -96,48 +66,45 @@ const Footer = () => {
           {/* Contact & Social */}
           <div className="space-y-6">
             <div>
-              <h3 className="text-white font-semibold mb-6">Let's Connect</h3>
-              <div className="flex space-x-4">
+              <h3 className="font-mono text-xs text-term-dim mb-5">// connect</h3>
+              <div className="flex gap-3">
                 {socialLinks.map((social, index) => (
                   <a
                     key={index}
                     href={social.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center text-gray-400 hover:text-white hover:bg-gradient-to-br hover:from-blue-500 hover:to-green-400 transition-all duration-200"
+                    className="w-10 h-10 bg-term-surface border border-term-border rounded-lg flex items-center justify-center text-term-muted hover:text-term-accent hover:border-term-accent/50 transition-all duration-200"
                     aria-label={social.label}
                   >
-                    {React.createElement(social.icon, { size: 20 })}
+                    {React.createElement(social.icon, { size: 18 })}
                   </a>
                 ))}
               </div>
             </div>
 
             <div>
-              <h4 className="text-white font-medium mb-2">Current Status</h4>
-              <div className="flex items-center space-x-2">
-                <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
-                <span className="text-green-400 text-sm">
-                  Available for consulting
-                </span>
+              <div className="flex items-center gap-2 font-mono text-sm">
+                <span className="w-2 h-2 bg-term-ok rounded-full animate-pulse"></span>
+                <span className="text-term-ok">available for consulting</span>
               </div>
             </div>
           </div>
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-white/10 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-gray-400 text-sm">
-            © {currentYear} Yogesh Kumar Singh. All rights reserved.
+        <div className="border-t border-term-border mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+          <p className="text-term-dim text-sm font-mono">
+            © {currentYear} Yogesh Kumar Singh — all rights reserved
           </p>
 
-          <div className="flex items-center space-x-6 mt-4 md:mt-0">
-            <span className="text-gray-400 text-sm">
-              Built with React, JavaScript & Tailwind CSS
+          <div className="flex items-center gap-6">
+            <span className="text-term-dim text-xs font-mono hidden sm:inline">
+              built with React &amp; Tailwind, not vibes alone
             </span>
             <button
               onClick={scrollToTop}
-              className="bg-gradient-to-r from-blue-500 to-green-400 text-white p-2 rounded-lg hover:from-blue-600 hover:to-green-500 transition-all duration-200"
+              className="bg-term-surface border border-term-border text-term-text p-2 rounded-lg hover:border-term-accent hover:text-term-accent transition-all duration-200"
               aria-label="Back to top"
             >
               <ArrowUp size={16} />

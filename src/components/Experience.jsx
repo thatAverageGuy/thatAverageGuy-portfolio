@@ -4,7 +4,6 @@ import {
   Calendar,
   ChevronDown,
   ChevronRight,
-  Users,
   Target,
   Lightbulb,
 } from "lucide-react";
@@ -16,12 +15,33 @@ const Experience = () => {
   const experiences = [
     {
       id: 0,
+      title: "Lead AI Engineer",
+      company: "Freecharge (by Axis Bank)",
+      period: "May 2026 - Present",
+      type: "Full-time On-site",
+      description:
+        "Part of the Vision Extract platform team, leading its Document AI division — extracting structured data from real-world documents, including handwritten ones, for banking workflows where 'the model looked confident' isn't an acceptable QA bar.",
+      highlights: [
+        "Leading the Document AI division within the Vision Extract platform, focused on handwritten and printed OCR extraction for banking and financial documents",
+        "Owning model accuracy and reliability for handwriting recognition — the one CV problem that laughs at your validation set",
+        "Working with the broader platform team on pipeline decisions for scaling document extraction across high-volume, compliance-sensitive workflows",
+      ],
+      technologies: [
+        "OCR",
+        "Handwriting Recognition",
+        "Document Intelligence",
+        "Computer Vision",
+        "Vision Extract Platform",
+      ],
+    },
+    {
+      id: 1,
       title: "Senior Software Engineer - ML and Agentic AI",
       company: "Randstad Digital - DocuSign",
-      period: "August 2025 - Present",
+      period: "August 2025 - May 2026",
       type: "Full-time Remote",
       description:
-        "Architecting production-scale AI agent systems for DocuSign's sales operations and building comprehensive data infrastructure",
+        "Architecting production-scale AI agent systems for DocuSign's sales operations and the data infrastructure they run on.",
       highlights: [
         "Architected and deployed production-scale AI agent systems for DocuSign's sales outreach teams, implementing CrewAI-based multi-agent workflows for automated lead generation and personalized email campaigns",
         "Engineered end-to-end data infrastructure supporting AI operations, developing dbt transformation pipelines and Airflow DAGs for orchestrating complex data workflows across Snowflake and production databases",
@@ -40,17 +60,17 @@ const Experience = () => {
       ],
     },
     {
-      id: 1,
+      id: 2,
       title: "Senior Software Engineer - ML and Agentic AI",
       company: "Randstad Digital - CISCO",
       period: "August 2024 - August 2025",
       type: "Full-time Remote",
       description:
-        "Led AI research initiatives and developed large-scale AIOps platforms for enhanced enterprise capabilities across diverse Cisco products",
+        "Led AI research initiatives and built large-scale AIOps platforms across Cisco's product line — the kind of scale where a bad deploy is everyone's problem by lunch.",
       highlights: [
         "Architected and led implementation of large-scale AIOps platform providing enhanced Assurance capabilities across diverse Cisco products (ThousandEyes, Meraki, Catalyst Center) for enterprise customers",
-        "Engineered and deployed production-grade Mixture of Experts (MoE) models, developing novel modular framework to convert standard LLMs into specialized MoE architectures, serving internal enterprise teams",
-        "Spearheaded development of Network Root Cause Analysis (RCA) solution by generating synthetic reasoning datasets and training bespoke models; successfully deployed for enterprise-wide internal testing",
+        "Engineered and deployed production-grade Mixture of Experts (MoE) models, developing a novel modular framework to convert standard LLMs into specialized MoE architectures, serving internal enterprise teams",
+        "Spearheaded development of a Network Root Cause Analysis (RCA) solution by generating synthetic reasoning datasets and training bespoke models; deployed for enterprise-wide internal testing",
         "Led cross-functional collaboration with product teams to integrate AI capabilities into existing Cisco infrastructure",
       ],
       technologies: [
@@ -66,22 +86,22 @@ const Experience = () => {
       ],
     },
     {
-      id: 2,
+      id: 3,
       title: "Freelance Consultant - AI/ML",
       company: "Independent",
       period: "August 2023 - August 2024",
       type: "Consulting",
       description:
-        "Delivered end-to-end AI solutions across various industries with focus on NLP, Computer Vision, and GenAI",
+        "Delivered end-to-end AI solutions across industries — NLP, Computer Vision, GenAI — for clients who all wanted it done yesterday.",
       highlights: [
-        "Implemented end-to-end NL2SQL pipeline with Human-in-the-loop verification, labeling, training and validation loop with best MLOps principles for a Fortune 500 company",
-        "Developed automated Video Tagging pipeline leveraging Computer Vision to identify and tag fashion items from product catalogs within videos",
-        "Built AI Teaching Assistant agent using RAG and multimodal data processing (docs, videos, web) for automated generation of teaching materials and student evaluations",
-        "Engineered multi-lingual ID document parsing system (passports, govt. IDs) extracting key entities from various file types",
-        "Developed Computer Vision systems for vehicle detection and tracking in driving school analysis",
-        "Architected advanced RAG applications incorporating query transformation and re-ranking, utilizing Vector Databases (ChromaDB, Qdrant)",
-        "Fine-tuned LLMs (LLaMA-2, Mistral 7B) using PEFT, QLoRA, and applied advanced prompt engineering (CoT, ReAct)",
-        "Utilized Quantization, Distillation, and Pruning in models to significantly enhance deployment efficiency in limited-resource settings",
+        "Implemented end-to-end NL2SQL pipeline with human-in-the-loop verification, labeling, training, and validation loop following MLOps best practices for a Fortune 500 company",
+        "Developed an automated video tagging pipeline leveraging computer vision to identify and tag fashion items from product catalogs within videos",
+        "Built an AI teaching assistant agent using RAG and multimodal data processing (docs, videos, web) for automated generation of teaching materials and student evaluations",
+        "Engineered a multi-lingual ID document parsing system (passports, government IDs) extracting key entities from various file types",
+        "Developed computer vision systems for vehicle detection and tracking in driving school analysis",
+        "Architected advanced RAG applications incorporating query transformation and re-ranking, using vector databases (ChromaDB, Qdrant)",
+        "Fine-tuned LLMs (LLaMA-2, Mistral 7B) using PEFT and QLoRA, and applied advanced prompt engineering (CoT, ReAct)",
+        "Applied quantization, distillation, and pruning to significantly improve deployment efficiency in limited-resource settings",
       ],
       technologies: [
         "NL2SQL",
@@ -98,30 +118,30 @@ const Experience = () => {
       ],
     },
     {
-      id: 3,
+      id: 4,
       title: "Machine Learning Engineer",
       company: "Althea.AI (previously Wisteli Informatics)",
       period: "August 2021 - August 2023",
       type: "Full-time",
       description:
-        "Led full lifecycle of ML projects for document intelligence and healthcare domain with team leadership experience",
+        "Owned the full lifecycle of ML projects in document intelligence and healthcare — where 'good enough' accuracy still isn't good enough.",
       highlights: [
-        "Led full lifecycle of 5 key Proofs-of-Concept, translating requirements into production-ready ML solutions for document intelligence and healthcare domain",
-        "Developed and deployed multi-modal models for automated classification, layout detection and data extraction (LayoutLM) from complex documents (medical reports, invoices, KYC data)",
-        "Implemented custom model + heuristics pipeline achieving 78% accuracy on challenging borderless table extraction tasks",
+        "Led the full lifecycle of 5 key proofs-of-concept, translating requirements into production-ready ML solutions for document intelligence and healthcare",
+        "Developed and deployed multi-modal models for automated classification, layout detection, and data extraction (LayoutLM) from complex documents (medical reports, invoices, KYC data)",
+        "Implemented a custom model + heuristics pipeline achieving 78% accuracy on challenging borderless table extraction tasks",
         "Improved overall pipeline accuracy by 20% through strategic application of YOLOv5 and advanced OpenCV image processing techniques",
         "Built and deployed ML models for insurance fraud/abuse detection",
         "Engineered and deployed scalable REST APIs (Flask) on AWS EC2 using Docker and RabbitMQ for asynchronous processing",
-        "Developed specialized solutions including Tuberculosis detection pipeline (X-ray analysis) and image denoising engine (U-Net based autoencoder) improving OCR quality",
-        "Implemented advanced image forgery detection techniques (RANSAC, Autoencoders, Noise Print)",
-        "Managed team of 4 developers and mentored 7 interns, driving project execution and fostering technical growth",
+        "Developed specialized solutions including a tuberculosis detection pipeline (X-ray analysis) and an image denoising engine (U-Net based autoencoder) that improved OCR quality",
+        "Implemented advanced image forgery detection techniques (RANSAC, autoencoders, noise print)",
+        "Managed a team of 4 developers and mentored 7 interns, driving project execution and technical growth",
       ],
       projects: [
-        "Multi-modal Document AI for medical reports, invoices, and KYC processing",
+        "Multi-modal document AI for medical reports, invoices, and KYC processing",
         "Insurance fraud/abuse detection system",
         "Tuberculosis detection from chest X-rays using deep learning",
         "Image forgery detection engine for document verification",
-        "Borderless table extraction with 78% accuracy",
+        "Borderless table extraction at 78% accuracy",
       ],
     },
   ];
@@ -131,84 +151,74 @@ const Experience = () => {
   };
 
   const ExperienceCard = ({ exp, index, isExpanded, onToggle }) => (
-    <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl border border-white/10 overflow-hidden">
-      {/* Header - Always visible */}
+    <div className="bg-term-surface rounded-lg border border-term-border overflow-hidden">
       <button
         onClick={() => onToggle(index)}
-        className="w-full p-6 text-left hover:bg-slate-700/30 transition-all duration-300"
+        className="w-full p-6 text-left hover:bg-term-surface-hi transition-all duration-300"
       >
-        <div className="flex items-center justify-between">
-          <div className="flex items-center space-x-4">
-            <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-br from-blue-500 to-green-400 rounded-lg">
-              <Building className="text-white" size={24} />
+        <div className="flex items-center justify-between gap-4">
+          <div className="flex items-center gap-4">
+            <div className="flex items-center justify-center w-10 h-10 rounded bg-term-bg border border-term-border flex-shrink-0">
+              <Building className="text-term-accent" size={20} />
             </div>
             <div>
-              <h3 className="text-xl font-bold text-white mb-1">{exp.title}</h3>
-              <p className="text-blue-400 text-lg">{exp.company}</p>
-              <div className="flex items-center space-x-4 text-gray-400 text-sm mt-1">
-                <span className="flex items-center space-x-1">
-                  <Calendar size={14} />
+              <h3 className="text-lg font-semibold text-term-text mb-1">{exp.title}</h3>
+              <p className="text-term-accent text-sm font-mono">{exp.company}</p>
+              <div className="flex items-center flex-wrap gap-3 text-term-dim text-xs mt-1.5 font-mono">
+                <span className="flex items-center gap-1">
+                  <Calendar size={12} />
                   <span>{exp.period}</span>
                 </span>
-                <span className="px-2 py-1 bg-green-400/20 text-green-400 rounded-full text-xs">
+                <span className="px-2 py-0.5 border border-term-border text-term-muted rounded">
                   {exp.type}
                 </span>
               </div>
             </div>
           </div>
           <ChevronDown
-            className={`text-blue-400 transition-transform duration-300 ${
+            className={`text-term-accent transition-transform duration-300 flex-shrink-0 ${
               isExpanded ? "rotate-180" : ""
             }`}
-            size={24}
+            size={20}
           />
         </div>
       </button>
 
-      {/* Expandable content */}
       <div
         className={`transition-all duration-300 ease-in-out overflow-hidden ${
           isExpanded ? "max-h-[2000px] opacity-100" : "max-h-0 opacity-0"
         }`}
       >
         <div className="px-6 pb-6">
-          <div className="border-t border-white/10 pt-6">
-            <p className="text-gray-300 mb-6 text-lg">{exp.description}</p>
+          <div className="border-t border-term-border pt-6">
+            <p className="text-term-muted mb-6">{exp.description}</p>
 
-            {/* Highlights */}
             <div className="mb-6">
-              <h4 className="text-white font-semibold mb-4 flex items-center space-x-2">
-                <Target className="text-blue-400" size={18} />
-                <span>Key Achievements</span>
+              <h4 className="text-term-text font-mono text-sm font-semibold mb-4 flex items-center gap-2">
+                <Target className="text-term-accent" size={16} />
+                <span>key achievements</span>
               </h4>
-              <ul className="space-y-2">
+              <ul className="space-y-2.5">
                 {exp.highlights.map((highlight, highlightIndex) => (
-                  <li
-                    key={highlightIndex}
-                    className="flex items-start space-x-3"
-                  >
-                    <ChevronRight
-                      className="text-green-400 mt-0.5 flex-shrink-0"
-                      size={16}
-                    />
-                    <span className="text-gray-300">{highlight}</span>
+                  <li key={highlightIndex} className="flex items-start gap-3">
+                    <ChevronRight className="text-term-accent mt-1 flex-shrink-0" size={14} />
+                    <span className="text-term-muted text-sm leading-relaxed">{highlight}</span>
                   </li>
                 ))}
               </ul>
             </div>
 
-            {/* Technologies or Projects */}
             {exp.technologies && (
-              <div className="mb-6">
-                <h4 className="text-white font-semibold mb-4 flex items-center space-x-2">
-                  <Lightbulb className="text-blue-400" size={18} />
-                  <span>Technologies & Focus Areas</span>
+              <div className="mb-2">
+                <h4 className="text-term-text font-mono text-sm font-semibold mb-4 flex items-center gap-2">
+                  <Lightbulb className="text-term-accent" size={16} />
+                  <span>stack</span>
                 </h4>
                 <div className="flex flex-wrap gap-2">
                   {exp.technologies.map((tech, techIndex) => (
                     <span
                       key={techIndex}
-                      className="px-3 py-1 bg-blue-500/20 text-blue-300 rounded-full text-sm"
+                      className="px-2.5 py-1 bg-term-bg border border-term-border text-term-muted rounded text-xs font-mono"
                     >
                       {tech}
                     </span>
@@ -219,21 +229,15 @@ const Experience = () => {
 
             {exp.projects && (
               <div>
-                <h4 className="text-white font-semibold mb-4 flex items-center space-x-2">
-                  <Target className="text-blue-400" size={18} />
-                  <span>Major Projects</span>
+                <h4 className="text-term-text font-mono text-sm font-semibold mb-4 flex items-center gap-2">
+                  <Target className="text-term-accent" size={16} />
+                  <span>major projects</span>
                 </h4>
-                <ul className="space-y-2">
+                <ul className="space-y-2.5">
                   {exp.projects.map((project, projectIndex) => (
-                    <li
-                      key={projectIndex}
-                      className="flex items-start space-x-3"
-                    >
-                      <ChevronRight
-                        className="text-green-400 mt-0.5 flex-shrink-0"
-                        size={16}
-                      />
-                      <span className="text-gray-300">{project}</span>
+                    <li key={projectIndex} className="flex items-start gap-3">
+                      <ChevronRight className="text-term-accent mt-1 flex-shrink-0" size={14} />
+                      <span className="text-term-muted text-sm leading-relaxed">{project}</span>
                     </li>
                   ))}
                 </ul>
@@ -246,18 +250,20 @@ const Experience = () => {
   );
 
   return (
-    <section id="experience" className="py-20 bg-slate-900">
+    <section id="experience" className="py-20 bg-term-bg border-t border-term-border">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            Professional Journey
+        <div className="mb-16">
+          <p className="font-mono text-sm text-term-accent mb-3">
+            <span className="text-term-dim">$</span> git log --oneline --all
+          </p>
+          <h2 className="text-3xl md:text-4xl font-bold text-term-text">
+            Professional journey
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-green-400 mx-auto mb-8"></div>
         </div>
 
         <div className="max-w-6xl mx-auto">
           {/* Mobile Layout - Accordion Style */}
-          <div className="lg:hidden space-y-6">
+          <div className="lg:hidden space-y-5">
             {experiences.map((exp, index) => (
               <ExperienceCard
                 key={exp.id}
@@ -271,126 +277,112 @@ const Experience = () => {
 
           {/* Desktop Layout - Side by Side */}
           <div className="hidden lg:flex gap-8">
-            {/* Tab buttons */}
-            <div className="w-1/3 space-y-4">
+            <div className="w-1/3 space-y-3">
               {experiences.map((exp, index) => (
                 <button
                   key={exp.id}
                   onClick={() => setActiveTab(index)}
-                  className={`w-full text-left p-6 rounded-xl border transition-all duration-300 ${
+                  className={`w-full text-left p-5 rounded-lg border transition-all duration-300 ${
                     activeTab === index
-                      ? "bg-gradient-to-r from-blue-500/20 to-green-400/20 border-blue-400/50"
-                      : "bg-slate-800/50 border-white/10 hover:border-white/20"
+                      ? "bg-term-surface border-term-accent/50"
+                      : "bg-term-surface/50 border-term-border hover:border-term-border"
                   }`}
                 >
-                  <div className="flex items-center justify-between">
+                  <div className="flex items-center justify-between gap-3">
                     <div>
-                      <h3 className="text-lg font-semibold text-white mb-1">
+                      <h3 className="text-base font-semibold text-term-text mb-1">
                         {exp.title}
                       </h3>
-                      <p className="text-blue-400 text-sm mb-1">
+                      <p className="text-term-accent text-sm font-mono mb-1">
                         {exp.company}
                       </p>
-                      <p className="text-gray-400 text-xs">{exp.period}</p>
+                      <p className="text-term-dim text-xs font-mono">{exp.period}</p>
                     </div>
                     <ChevronRight
-                      className={`text-blue-400 transition-transform duration-300 ${
+                      className={`text-term-accent transition-transform duration-300 flex-shrink-0 ${
                         activeTab === index ? "rotate-90" : ""
                       }`}
-                      size={20}
+                      size={18}
                     />
                   </div>
                 </button>
               ))}
             </div>
 
-            {/* Tab content */}
             <div className="w-2/3">
-              <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
-                <div className="flex items-center space-x-4 mb-6">
-                  <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-br from-blue-500 to-green-400 rounded-lg">
-                    <Building className="text-white" size={24} />
+              <div className="bg-term-surface rounded-lg p-8 border border-term-border">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="flex items-center justify-center w-10 h-10 rounded bg-term-bg border border-term-border flex-shrink-0">
+                    <Building className="text-term-accent" size={20} />
                   </div>
                   <div>
-                    <h3 className="text-2xl font-bold text-white">
+                    <h3 className="text-xl font-bold text-term-text">
                       {experiences[activeTab].title}
                     </h3>
-                    <p className="text-blue-400 text-lg">
+                    <p className="text-term-accent font-mono">
                       {experiences[activeTab].company}
                     </p>
-                    <div className="flex items-center space-x-4 text-gray-400 text-sm mt-1">
-                      <span className="flex items-center space-x-1">
-                        <Calendar size={14} />
+                    <div className="flex items-center gap-4 text-term-dim text-xs mt-1.5 font-mono">
+                      <span className="flex items-center gap-1">
+                        <Calendar size={12} />
                         <span>{experiences[activeTab].period}</span>
                       </span>
-                      <span className="px-2 py-1 bg-green-400/20 text-green-400 rounded-full text-xs">
+                      <span className="px-2 py-0.5 border border-term-border text-term-muted rounded">
                         {experiences[activeTab].type}
                       </span>
                     </div>
                   </div>
                 </div>
 
-                <p className="text-gray-300 mb-6 text-lg">
+                <p className="text-term-muted mb-6">
                   {experiences[activeTab].description}
                 </p>
 
-                {/* Highlights */}
                 <div className="mb-6">
-                  <h4 className="text-white font-semibold mb-4 flex items-center space-x-2">
-                    <Target className="text-blue-400" size={18} />
-                    <span>Key Achievements</span>
+                  <h4 className="text-term-text font-mono text-sm font-semibold mb-4 flex items-center gap-2">
+                    <Target className="text-term-accent" size={16} />
+                    <span>key achievements</span>
                   </h4>
-                  <ul className="space-y-2">
-                    {experiences[activeTab].highlights.map(
-                      (highlight, index) => (
-                        <li key={index} className="flex items-start space-x-3">
-                          <ChevronRight
-                            className="text-green-400 mt-0.5 flex-shrink-0"
-                            size={16}
-                          />
-                          <span className="text-gray-300">{highlight}</span>
-                        </li>
-                      )
-                    )}
+                  <ul className="space-y-2.5">
+                    {experiences[activeTab].highlights.map((highlight, index) => (
+                      <li key={index} className="flex items-start gap-3">
+                        <ChevronRight className="text-term-accent mt-1 flex-shrink-0" size={14} />
+                        <span className="text-term-muted text-sm leading-relaxed">{highlight}</span>
+                      </li>
+                    ))}
                   </ul>
                 </div>
 
-                {/* Technologies or Projects */}
                 {experiences[activeTab].technologies && (
-                  <div className="mb-6">
-                    <h4 className="text-white font-semibold mb-4 flex items-center space-x-2">
-                      <Lightbulb className="text-blue-400" size={18} />
-                      <span>Technologies & Focus Areas</span>
+                  <div className="mb-2">
+                    <h4 className="text-term-text font-mono text-sm font-semibold mb-4 flex items-center gap-2">
+                      <Lightbulb className="text-term-accent" size={16} />
+                      <span>stack</span>
                     </h4>
                     <div className="flex flex-wrap gap-2">
-                      {experiences[activeTab].technologies.map(
-                        (tech, index) => (
-                          <span
-                            key={index}
-                            className="px-3 py-1 bg-blue-500/20 text-blue-300 rounded-full text-sm"
-                          >
-                            {tech}
-                          </span>
-                        )
-                      )}
+                      {experiences[activeTab].technologies.map((tech, index) => (
+                        <span
+                          key={index}
+                          className="px-2.5 py-1 bg-term-bg border border-term-border text-term-muted rounded text-xs font-mono"
+                        >
+                          {tech}
+                        </span>
+                      ))}
                     </div>
                   </div>
                 )}
 
                 {experiences[activeTab].projects && (
                   <div>
-                    <h4 className="text-white font-semibold mb-4 flex items-center space-x-2">
-                      <Target className="text-blue-400" size={18} />
-                      <span>Major Projects</span>
+                    <h4 className="text-term-text font-mono text-sm font-semibold mb-4 flex items-center gap-2">
+                      <Target className="text-term-accent" size={16} />
+                      <span>major projects</span>
                     </h4>
-                    <ul className="space-y-2">
+                    <ul className="space-y-2.5">
                       {experiences[activeTab].projects.map((project, index) => (
-                        <li key={index} className="flex items-start space-x-3">
-                          <ChevronRight
-                            className="text-green-400 mt-0.5 flex-shrink-0"
-                            size={16}
-                          />
-                          <span className="text-gray-300">{project}</span>
+                        <li key={index} className="flex items-start gap-3">
+                          <ChevronRight className="text-term-accent mt-1 flex-shrink-0" size={14} />
+                          <span className="text-term-muted text-sm leading-relaxed">{project}</span>
                         </li>
                       ))}
                     </ul>
